@@ -8,6 +8,7 @@ class Admin::StocksController < ApplicationController
 
   # GET /admin/stocks/1 or /admin/stocks/1.json
   def show
+
   end
 
   # GET /admin/stocks/new
@@ -69,6 +70,6 @@ class Admin::StocksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def admin_stock_params
-      params.require(:admin_stock).permit(:amount, :size)
+      params.require(:stock).permit(:amount, :size)
     end
 end
