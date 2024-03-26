@@ -1,9 +1,9 @@
-class Admin::StocksController < ApplicationController
+class Admin::StocksController < AdminController
   before_action :set_admin_stock, only: %i[ show edit update destroy ]
 
   # GET /admin/stocks or /admin/stocks.json
   def index
-    @admin_stocks = Stock.all
+    @admin_stocks = Stock.where(product_id: params[:product_id])
   end
 
   # GET /admin/stocks/1 or /admin/stocks/1.json
